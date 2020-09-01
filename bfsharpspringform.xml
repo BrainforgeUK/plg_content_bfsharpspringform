@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_BFSHARPSPRINGFORM</name>
+	<version>1.0.0</version>
+	<author>Jonathan Brain</author>
+	<creationDate>September 2020</creationDate>
+	<copyright>Copyright (C) 2020 Jonathan Brain. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>brainforge.uk@btinternet.com</authorEmail>
+	<authorUrl>https://www.brainforge.co.uk</authorUrl>
+	<description>PLG_CONTENT_BFSHARPSPRINGFORM_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="bfsharpspringform">bfsharpspringform.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields
+				name="params"
+		>
+			<fieldset
+					name="basic">
+				<field
+						name="demo"
+						type="radio"
+						class="btn-group"
+						default="0"
+						label="PLG_CONTENT_BFSHARPSPRINGFORM_DEMO_LABEL"
+						description="PLG_CONTENT_BFSHARPSPRINGFORM_DEMO_DESC"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="PLG_CONTENT_BFSHARPSPRINGFORM">
+			https://brainforge.co.uk/component/bfupdater?element=plg_content_bfsharpspringform.xml
+		</server>
+	</updateservers>
+</extension>
