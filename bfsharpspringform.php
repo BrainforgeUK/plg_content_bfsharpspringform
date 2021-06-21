@@ -70,10 +70,16 @@ class PlgContentBfsharpspringform extends CMSPlugin
 			return;
 		}
 
-		preg_match('@{bfsharpspringform}.+{/bfsharpspringform}@', $article->text, $forms);
+		preg_match_all('@{bfsharpspringform}.+{/bfsharpspringform}@', $article->text, $forms);
 		if (!empty($forms))
 		{
-			$this->forms += $forms;
+			foreach($forms as $form)
+			{
+				if (!empty($form))
+				{
+					$this->forms += $form;
+				}
+			}
 		}
 	}
 
